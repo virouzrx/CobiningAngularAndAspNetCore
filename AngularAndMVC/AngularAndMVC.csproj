@@ -20496,5 +20496,12 @@
       <EmbeddedResource Remove="Angular\AngularProject\node_modules\**" />
       <EmbeddedResource Remove="Angular\AngularProject\.vscode\**" />
     </ItemGroup>
-
+    
+      <!-- Add these two Targets at the end. -->
+  <Target Name="NgRelease" BeforeTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Exec WorkingDirectory="$(ProjectDir)\Angular\AngularProject" Command="ng build --prod" />
+  </Target>
+  <Target Name="NgRelease" BeforeTargets="Build" Condition="'$(Configuration)' == 'Debug'">
+    <Exec WorkingDirectory="$(ProjectDir)\Angular\AngularProject" Command="ng build" />
+  </Target>
 </Project>
