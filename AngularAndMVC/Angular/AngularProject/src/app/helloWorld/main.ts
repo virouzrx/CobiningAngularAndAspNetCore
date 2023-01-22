@@ -2,7 +2,7 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { environment } from '../../environments/environment';
-import { HelloWorldModule } from './hello-world.module';
+import { HelloWorldModule } from './helloWorld.module';
 
 
 if (environment.production) {

@@ -2,6 +2,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddWebOptimizer(pipeline =>
+{
+    pipeline.AddCssBundle("/css/angular/styles.css", "angular_build/styles.*.css");
+    pipeline.AddJavaScriptBundle("/js/angular_hello_world.js", "angular_build/hello_world.*.js", "");
+    pipeline.AddJavaScriptBundle("/js/angular_common.js", "angular_build/pollyfills.*.js", "angular_build/runtime.*.js");
+    pipeline.MinifyJsFiles();
+});
 
 var app = builder.Build();
 
@@ -14,6 +21,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseWebOptimizer();
 app.UseStaticFiles();
 
 app.UseRouting();

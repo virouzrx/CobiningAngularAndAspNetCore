@@ -7,7 +7,7 @@
   },
   "files": [
     "src/main.ts",
-    "src/app/hello-world/main.ts"
+    "src/app/helloWorld/main.ts"
   ],
   "include": [
     "src/**/*.d.ts"

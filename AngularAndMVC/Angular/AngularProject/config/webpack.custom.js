@@ -1,5 +1,5 @@
 ﻿module.exports = {
   entry: {
-    hello_world: "./src/app/hello-world/main.ts"
+    hello_world: "./src/app/helloWorld/main.ts"
   }
 }
