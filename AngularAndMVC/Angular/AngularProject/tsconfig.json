@@ -4,16 +4,17 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "../../wwwroot/angular_build",
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "strict": true,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "allowJs": true,
+
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
@@ -24,6 +25,7 @@
       "dom"
     ]
   },
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

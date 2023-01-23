@@ -4,9 +4,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddWebOptimizer(pipeline =>
 {
-    pipeline.AddCssBundle("/css/angular/styles.css", "angular_build/styles.*.css");
-    pipeline.AddJavaScriptBundle("/js/angular_hello_world.js", "angular_build/hello_world.*.js", "");
-    pipeline.AddJavaScriptBundle("/js/angular_common.js", "angular_build/pollyfills.*.js", "angular_build/runtime.*.js");
+    pipeline.AddCssBundle("/css/angular/styles.css", "angularBuild/styles.*.css");
+    pipeline.AddJavaScriptBundle("/js/angularHelloWorld.js", "angularBuild/helloWorld.*.js", "");
+    pipeline.AddJavaScriptBundle("/js/angularCommon.js", "angularBuild/polyfills.*.js", "angularBuild/runtime.*.js");
+    pipeline.AddJavaScriptBundle("/js/modernizr.js", "js/modernizr-*.js");
     pipeline.MinifyJsFiles();
 });
 
